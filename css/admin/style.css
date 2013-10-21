@@ -1,0 +1,492 @@
+* {
+	margin:0;
+	padding:0;
+}
+img {
+	cursor:pointer;
+} 
+body {
+    font:normal 12px verdana;
+    margin: 0; 
+    padding: 0;
+    height:100%;
+    background: #DFE8F6;
+}
+.header {
+    font:bold 18px verdana;
+    font-weight: bold;
+    height: 30px;
+    padding: 12px;
+    background-color : #DFE8F6;
+}
+
+.footer {
+    height: 15px;
+    background-color : #DFE8F6;
+}
+
+.menuItem {
+    margin: 5px 0px 5px 10px;
+}
+
+.menuItem a {
+    color:#15428B;
+    font-family:tahoma,arial,verdana,sans-serif;
+    font-size:13px;
+    text-decoration: none;
+}
+
+.actionsItem {
+    margin: 5px 0px 5px 10px;
+}
+
+.actionsItem a {
+    color:#15428B;
+    font-family:tahoma,arial,verdana,sans-serif;
+    font-size:11px;
+    text-decoration: none;
+}
+
+.actionsItem a:hover {
+    color:#15428B;
+    font-family:tahoma,arial,verdana,sans-serif;
+    font-size:11px;
+    text-decoration: underline;
+}
+
+.logout {
+    margin: 0px 0px 0px 10px;
+}
+
+.logout a {
+    color:#15428B;
+    font-family:tahoma,arial,verdana,sans-serif;
+    font-size:11px;
+    text-decoration: none;
+}
+
+.logout a:hover {
+    color:#15428B;
+    font-family:tahoma,arial,verdana,sans-serif;
+    font-size:11px;
+    text-decoration: underline;
+}
+
+.error {
+    color:#FF0000;
+    font-family:tahoma,arial,verdana,sans-serif;
+    font-size:11px;
+    text-decoration: none;
+}
+
+/* fix cell grid to display multiline*/
+.x-grid3-cell-inner-fix {
+    overflow:hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    padding:3px 3px 3px 5px;
+    white-space: normal;
+}
+
+.align-right .x-form-item {
+	text-align: right;
+	padding-right:25px;
+}
+
+.align-right label {
+	text-align: left;
+}
+/********** --- PRICES -- **********/
+.head_label {
+	float:left;
+	font-weight:bold;
+	margin-bottom:7px;
+}
+.fl{
+	float:left;
+}
+/**** changes  ****/
+.priceTable {
+	background-color:#F4F7F8;
+	color:#3470A8;
+	float:left;
+	font-size:11px;
+	font-weight:bold;
+	height:670px;
+	margin:5px 0 10px;
+	overflow:auto;
+	position:relative;
+	text-align:center;
+	vertical-align:middle;	
+	width:100%;	
+}
+.priceTableHeader{
+	background-color:#36648B;
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid #DFE5EB;
+	color:#E8E8E8;
+	float:left;
+	width:1010px;
+}
+.priceTableBody {
+	height:627px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	width:1010px;
+}
+.priceTableRow {
+	float:left;
+	width:1010px;
+}
+.colNumRow, .colChbox, .colBrandName,
+.colWidth, .colProfile, .colDiameter,
+.colModel,.colLoadIndex, .colSpeedIndex,
+.colAmount,.colPrice,.colComment{
+	float:left;
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid #DFE5EB;
+	border-left:1px solid #DFE5EB;
+	line-height:20px;	
+}
+div.priceTableHeader div.colNumRow,
+div.priceTableHeader div.colChbox, 
+div.priceTableHeader div.colBrandName,
+div.priceTableHeader div.colWidth,
+div.priceTableHeader div.colProfile,
+div.priceTableHeader div.colDiameter,
+div.priceTableHeader div.colModel,
+div.priceTableHeader div.colLoadIndex,
+div.priceTableHeader div.colSpeedIndex,
+div.priceTableHeader div.colAmount,
+div.priceTableHeader div.colPrice,
+div.priceTableHeader div.colComment
+{
+	height:40px;
+}
+
+.colNumRow {
+	width:55px;
+	background-color:#36648B;
+	color:#E8E8E8;
+}
+.colChbox {	
+	width:30px;
+}
+.colChbox input{
+	bottom:3px;
+	margin-top:7px;
+	position:relative;
+}
+.colBrandName {
+	overflow-x:auto;
+	width:150px;
+}
+.colWidth,.colProfile,.colDiameter,.colLoadIndex,
+.colSpeedIndex,.colAmount,.colPrice,.colComment  {
+	overflow-x:auto;
+	width:60px;
+}
+.colAmount {
+	width:87px;
+}
+.colPrice {
+	width:75px;
+}
+.colComment {
+	width:93px;
+}
+.colModel {
+	overflow-x:auto;
+	width:150px;
+}
+.headerTab {
+	background-color: #f4f7f8;
+	width:100%;
+}
+.headerTab td {
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid #DFE5EB;
+	color:#3470A8;
+	font-size:11px;
+	font-weight:bold;
+	line-height:20px;
+	text-align:center;
+	vertical-align:middle;
+	width:50px;
+}
+.headerTab th {
+	background-color:#36648B;
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid #DFE5EB;
+	color:#E8E8E8;
+	font-size:11px;
+	font-weight:bold;
+	line-height:20px;
+	text-align:center;
+	vertical-align:middle;
+	width:50px;
+}
+.headerTab th.compare, td.compare {
+	background-color: #008B8B!important;
+	color:#E8E8E8!important;
+}
+.priceTableRow .compare_empty {
+	background-color: #8B0000!important;
+}
+.vendorProfile {
+	float: left;
+	margin: 10px 0pt;
+	width: 1150px;
+}
+.priceBlock{
+	margin-left:15px;
+}
+.priceBlockMain {
+	float:left;
+	margin:0 0 0 15px;
+	width:755px;
+}
+.priceBox{
+	border-bottom:1px solid #CCCCCC;
+	float:left;
+	min-height:20px;
+	width:100%;
+}
+.heaLabelBlock{
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+	margin:5px 0;
+	text-align:left;
+	width:100%;
+}
+.heaLabel{
+	float:left;
+}
+.addVendorLabel{
+	color:#114170;
+	cursor:pointer;
+	float:right;
+	font-weight:bold;
+}
+.priceTrain{
+	float:right;
+	margin-left:10px;
+	width:355px;
+}
+.trainBlockType {
+	float:left;
+	font-weight:bold;
+	width:150px;
+}
+.trainBlockElements {
+	float:left;
+	font-weight:bold;
+	width:37px;
+}
+.trainBlockElements input{
+	width:25px;
+}
+.trainBlockElements select{
+	width:50px;
+}
+.trainBlockAttr {
+	float:left;
+	margin-top:3px;
+	width:100%;
+}
+.function_area {
+	height:70px;
+	width:350px;
+}
+div.priceTrain select {
+	width:50px;
+}
+	/******** PAGINATION  *********/
+.paginator	{
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+	line-height:0;
+	margin:10px 0 7px;
+	position:relative;
+	text-align:center;
+	width:100%;
+}
+.paginator a	{
+	margin:0 5px;
+	color:#114170;
+	margin-left:3px;
+	margin-right:2px;
+	cursor:pointer;
+}
+#pagin_left{
+	float:left;
+	height:17px;
+}
+#pagin_right{
+	float:right;
+}
+/******  VENDOR PROFILE  *********/
+.datePriceUploaded {
+	float:right;
+	font-size:10px;
+	font-style:normal;
+	font-weight:bold;
+	margin:3px 5px 5px;
+	text-decoration:underline;
+}
+.statusPriceUploaded {
+	float:right;
+	font-size:10px;
+	font-style:normal;
+	font-weight:bold;
+	margin:3px 5px 5px;
+}
+.linkAction {
+	color:#114170;
+	cursor:pointer;
+	font-weight:bold;
+	font-size:11px;
+	text-decoration:none;
+}
+/********* DICTIONARY  ***************/
+.dictBlockMain {
+	float:left;
+	font-size:12px;
+}
+.dictBlockMain span {	
+	font-weight:bold;
+}
+.dictBlockMain select {
+	width:235px;
+}
+#brands, #models {
+	width:275px;
+}
+.elementsGroup {
+	float:left;
+	width:100%;
+}
+.elementsSection {
+	float:left;
+	margin:0 0 0 5px;
+	width:485px;
+}
+.elementsBrand {
+	width:445px!important;
+}
+.elementsImg {
+	position:relative;
+	top:10px;
+}
+.elementsImg .elementDel {
+	position:relative;
+	right:7px;
+}
+.elementLabel {	
+	float:left;
+	font-size:11px;	
+}
+.newElementsSection {
+	margin-bottom:5px;
+}
+.newElementAdd {
+	float:right;
+	margin-top:3px;	
+}
+.elementLoading {
+	float:left;
+	margin-left:365px;
+	position:relative;
+	top:8px;
+}
+.elementLoading img {
+	height:5px;
+}
+/*** brands_new ***/
+#brands_new, #models_new, #models_syn_new, #brands_syn_new {
+	float:left;
+	margin-top:10px;
+}
+#models_new .newElementAdd,
+#brands_new .newElementAdd,{
+	width:237px;
+}
+#brands_new {
+	width:332px;
+}
+#brands_new .elementLabel {
+	width:135px;
+}
+#brands_new input {
+	width:193px;
+}
+/*** models_new ***/
+#model_new, #models_new {
+	width:330px;
+}
+#models_new select {
+	width:120px;
+}
+#models_new input {
+	width:225px;
+}
+#models_new .elementLabel {
+	width:100px;
+}
+/*** models_syn_new ***/
+#models_syn_new .newElementAdd,
+#brands_syn_new .newElementAdd {
+	width:195px;
+}
+#models_syn_new input,
+#brands_syn_new input {
+	width:230px;
+}
+#models_syn_new .elementLabel,
+#brands_syn_new .elementLabel {
+	width:135px;
+}
+/********** VENDOR NEW  ********************/
+#vendor_edit {
+	float:left;
+	margin: 0 0 25px;
+}
+#vendor_edit .title {
+	background:none repeat scroll 0 0 transparent;
+	border:medium none;
+	float:left;
+	font-size:11px;
+	margin:0;
+	padding:0;
+	width:165px;
+}
+#vendor_edit .vendorNewSection {
+	margin:3px 0 2px;
+}
+#vendor_edit .vendorNewLink {
+	float:right;
+	margin-top:5px;
+}
+#vendor_edit_error, #vendor_edit_person_error, #new_vendor_edit_person_error{
+	color:red;
+	font-size:10px;
+	font-weight:bold;
+}
+#vendor_edit .vendorNewLink .linkAction {
+	font-size:12px;
+}
+/****** ACCOUNT  ******/
+#newAccount .title {
+	background:none repeat scroll 0 0 transparent;
+	border:medium none;
+	float:left;
+	font-size:11px;
+	margin:0;
+	padding:0;
+	width:65px;
+}
+#newAccount .vendorNewSection input, #accountBoxes .vendorNewSection input {
+	width:150px;
+}

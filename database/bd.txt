@@ -1,0 +1,1187 @@
+/*Database Information For - shyna*/
+------------------------------------
+Name              Engine  Version  Row_format    Rows  Avg_row_length 
+
+----------------  ------  -------  ----------  ------  -------------- 
+_tmp_export       MyISAM       10  Dynamic       1335              53 
+article_news      MyISAM       10  Dynamic          0               0 
+brand             MyISAM       10  Dynamic         86              20 
+brand_syn         MyISAM       10  Dynamic        113              20 
+captcha           MyISAM       10  Dynamic         59              39 
+ci_sessions       MyISAM       10  Dynamic          3             152 
+currency          InnoDB       10  Compact          4            4096 
+currencycourse    MyISAM       10  Dynamic          3              20 
+diameter          MyISAM       10  Dynamic         18              20 
+load_index        MyISAM       10  Dynamic        231              20 
+model             MyISAM       10  Dynamic       1684              24 
+model_syn         MyISAM       10  Dynamic       2256              24 
+page              MyISAM       10  Dynamic          0               0 
+pricelists        MyISAM       10  Dynamic         29              46 
+prices            MyISAM       10  Dynamic      15744              43 
+profile           MyISAM       10  Dynamic         18              20 
+sheets            MyISAM       10  Dynamic         24              38 
+shyna_tmp11       MyISAM       10  Dynamic         28             115 
+shyna_tmp19       MyISAM       10  Dynamic         14              59 
+shyna_tmp22       MyISAM       10  Dynamic        696              86 
+shyna_tmp23       MyISAM       10  Dynamic          9              48 
+shyna_tmp24       MyISAM       10  Dynamic        693              78 
+shyna_tmp25       MyISAM       10  Dynamic        820             110 
+shyna_tmp26       MyISAM       10  Dynamic         21              66 
+shyna_tmp27       MyISAM       10  Dynamic         16              64 
+shyna_tmp28       MyISAM       10  Dynamic       9197              42 
+shyna_tmp29       MyISAM       10  Dynamic       1776              71 
+shyna_tmp30       MyISAM       10  Dynamic        279              44 
+shyna_tmp31       MyISAM       10  Dynamic       2108              56 
+shyna_tmp32       MyISAM       10  Dynamic         96             133 
+shyna_tmp33       MyISAM       10  Dynamic        993              61 
+shyna_tmp34       MyISAM       10  Dynamic          0               0 
+shyna_tmp35       MyISAM       10  Dynamic       1287              53 
+shyna_tmp36       MyISAM       10  Dynamic        558              67 
+shyna_tmp37       MyISAM       10  Dynamic        195             148 
+shyna_tmp38       MyISAM       10  Dynamic          0               0 
+speed_index       MyISAM       10  Dynamic         32              20 
+user_account      InnoDB       10  Compact         30             546 
+user_group        MyISAM       10  Dynamic          4              20 
+user_group_map1   MyISAM       10  Fixed           20              13 
+user_profile1     InnoDB       10  Compact          1           16384 
+vendor            MyISAM       10  Dynamic         19             233 
+vendor_accounts   InnoDB       10  Compact          5            3276 
+vendor_functions  InnoDB       10  Compact         24             682 
+vendor_person     MyISAM       10  Dynamic         18             103 
+width             MyISAM       10  Dynamic         52              20 
+=======================================================================
+=======================================================================
+=======================================================================
+/*Column Information For - shyna._tmp_export*/
+----------------------------------------------
+
+Field   Type          Collation        Null    Key     Default  Extra   Privileges                       Comment
+------  ------------  ---------------  ------  ------  -------  ------  -------------------------------  -------
+f1      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f2      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f3      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f4      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f5      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f6      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f7      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f8      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f9      varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+f10     varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+
+/*Index Information For - shyna._tmp_export*/
+---------------------------------------------
+
+Table   Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+
+
+/*DDL Information For - shyna._tmp_export*/
+-------------------------------------------
+
+Table        Create Table                          
+-----------  --------------------------------------
+_tmp_export  CREATE TABLE `_tmp_export` (          
+               `f1` varchar(100) default NULL,     
+               `f2` varchar(100) default NULL,     
+               `f3` varchar(100) default NULL,     
+               `f4` varchar(100) default NULL,     
+               `f5` varchar(100) default NULL,     
+               `f6` varchar(100) default NULL,     
+               `f7` varchar(100) default NULL,     
+               `f8` varchar(100) default NULL,     
+               `f9` varchar(100) default NULL,     
+               `f10` varchar(100) default NULL     
+             ) ENGINE=MyISAM DEFAULT CHARSET=utf8  
+
+============================================================
+/*Column Information For - shyna.article_news*/
+-----------------------------------------------
+
+Field           Type          Collation        Null    Key     Default  Extra           Privileges                       Comment                                    
+--------------  ------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------------------------------------------
+article_id      int(11)       (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references                                             
+title           varchar(255)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  title text                                 
+intro           text          utf8_general_ci  YES             (NULL)                   select,insert,update,references  intro text (short description for lists)   
+image           varchar(255)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  article image (image for intro)            
+author          varchar(255)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  author of the article                      
+content         text          utf8_general_ci  YES             (NULL)                   select,insert,update,references  article text                               
+date_added      datetime      (NULL)           YES             (NULL)                   select,insert,update,references  date when article was added                
+date_published  datetime      (NULL)           YES             (NULL)                   select,insert,update,references  date when article was pulished into website
+views           int(11)       (NULL)           YES             0                        select,insert,update,references                                             
+moderated       int(1)        (NULL)           YES             0                        select,insert,update,references  moderation status                          
+active          int(1)        (NULL)           YES             0                        select,insert,update,references  is article active (fetch for lists)        
+
+/*Index Information For - shyna.article_news*/
+----------------------------------------------
+
+Table         Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+article_news           0  PRIMARY              1  article_id   A                    0    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.article_news*/
+--------------------------------------------
+
+Table         Create Table                                                                                                                
+------------  ----------------------------------------------------------------------------------------------------------------------------
+article_news  CREATE TABLE `article_news` (                                                                                               
+                `article_id` int(11) NOT NULL auto_increment,                                                                             
+                `title` varchar(255) default NULL COMMENT 'title text',                                                                   
+                `intro` text COMMENT 'intro text (short description for lists)',                                                          
+                `image` varchar(255) default NULL COMMENT 'article image (image for intro)',                                              
+                `author` varchar(255) default NULL COMMENT 'author of the article',                                                       
+                `content` text COMMENT 'article text',                                                                                    
+                `date_added` datetime default NULL COMMENT 'date when article was added',                                                 
+                `date_published` datetime default NULL COMMENT 'date when article was pulished into website',                             
+                `views` int(11) default '0',                                                                                              
+                `moderated` int(1) default '0' COMMENT 'moderation status',                                                               
+                `active` int(1) default '0' COMMENT 'is article active (fetch for lists)',                                                
+                PRIMARY KEY  (`article_id`)                                                                                               
+              ) ENGINE=MyISAM AUTO_INCREMENT=73 DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=2730 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC  
+=========================================================
+/*Column Information For - shyna.brand*/
+----------------------------------------
+
+Field   Type         Collation        Null    Key     Default  Extra           Privileges                       Comment
+------  -----------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+id      tinyint(4)   (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+value   varchar(40)  utf8_general_ci  NO              (NULL)                   select,insert,update,references  brand  
+
+/*Index Information For - shyna.brand*/
+---------------------------------------
+
+Table   Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+brand            0  PRIMARY              1  id           A                   86    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.brand*/
+-------------------------------------
+
+Table   Create Table                                                                          
+------  --------------------------------------------------------------------------------------
+brand   CREATE TABLE `brand` (                                                                
+          `id` tinyint(4) NOT NULL auto_increment,                                            
+          `value` varchar(40) NOT NULL COMMENT 'brand',                                       
+          PRIMARY KEY  (`id`)                                                                 
+        ) ENGINE=MyISAM AUTO_INCREMENT=90 DEFAULT CHARSET=utf8 COMMENT='Бренд производителя'  
+==========================================================
+/*Column Information For - shyna.brand_syn*/
+--------------------------------------------
+
+Field     Type          Collation        Null    Key     Default  Extra           Privileges                       Comment
+--------  ------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+id        int(11)       (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+brand_id  tinyint(4)    (NULL)           NO      MUL     (NULL)                   select,insert,update,references         
+name      varchar(255)  utf8_general_ci  NO              (NULL)                   select,insert,update,references  синоним
+
+/*Index Information For - shyna.brand_syn*/
+-------------------------------------------
+
+Table      Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+---------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+brand_syn           0  PRIMARY              1  id           A                  113    (NULL)  (NULL)          BTREE              
+brand_syn           1  brand_id             1  brand_id     A               (NULL)    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.brand_syn*/
+-----------------------------------------
+
+Table      Create Table                                                                        
+---------  ------------------------------------------------------------------------------------
+brand_syn  CREATE TABLE `brand_syn` (                                                          
+             `id` int(11) NOT NULL auto_increment,                                             
+             `brand_id` tinyint(4) NOT NULL,                                                   
+             `name` varchar(255) NOT NULL COMMENT 'синоним',                                   
+             PRIMARY KEY  (`id`),                                                              
+             KEY `brand_id` (`brand_id`)                                                       
+           ) ENGINE=MyISAM AUTO_INCREMENT=118 DEFAULT CHARSET=utf8 COMMENT='Синонимы брендов'  
+=============================================================
+
+/*Column Information For - shyna.captcha*/
+------------------------------------------
+
+Field         Type                 Collation        Null    Key     Default  Extra           Privileges                       Comment
+------------  -------------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+captcha_id    bigint(13) unsigned  (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+captcha_time  int(10) unsigned     (NULL)           NO              (NULL)                   select,insert,update,references         
+ip_address    varchar(16)          utf8_general_ci  NO              0                        select,insert,update,references         
+word          varchar(20)          utf8_general_ci  NO      MUL     (NULL)                   select,insert,update,references         
+
+/*Index Information For - shyna.captcha*/
+-----------------------------------------
+
+Table    Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+-------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+captcha           0  PRIMARY              1  captcha_id   A                   59    (NULL)  (NULL)          BTREE              
+captcha           1  word                 1  word         A               (NULL)    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.captcha*/
+---------------------------------------
+
+Table    Create Table                                                 
+-------  -------------------------------------------------------------
+captcha  CREATE TABLE `captcha` (                                     
+           `captcha_id` bigint(13) unsigned NOT NULL auto_increment,  
+           `captcha_time` int(10) unsigned NOT NULL,                  
+           `ip_address` varchar(16) NOT NULL default '0',             
+           `word` varchar(20) NOT NULL,                               
+           PRIMARY KEY  (`captcha_id`),                               
+           KEY `word` (`word`)                                        
+         ) ENGINE=MyISAM AUTO_INCREMENT=1111 DEFAULT CHARSET=utf8     
+======================================================
+
+/*Column Information For - shyna.ci_sessions*/
+----------------------------------------------
+
+Field          Type              Collation        Null    Key     Default  Extra   Privileges                       Comment
+-------------  ----------------  ---------------  ------  ------  -------  ------  -------------------------------  -------
+session_id     varchar(40)       utf8_general_ci  NO      PRI     0                select,insert,update,references         
+ip_address     varchar(16)       utf8_general_ci  NO              0                select,insert,update,references         
+user_agent     varchar(50)       utf8_general_ci  NO              (NULL)           select,insert,update,references         
+last_activity  int(10) unsigned  (NULL)           NO              0                select,insert,update,references         
+session_data   text              utf8_general_ci  YES             (NULL)           select,insert,update,references         
+user_data      text              utf8_general_ci  YES             (NULL)           select,insert,update,references         
+
+/*Index Information For - shyna.ci_sessions*/
+---------------------------------------------
+
+Table        Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+-----------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+ci_sessions           0  PRIMARY              1  session_id   A                    3    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.ci_sessions*/
+-------------------------------------------
+
+Table        Create Table                                                                          
+-----------  --------------------------------------------------------------------------------------
+ci_sessions  CREATE TABLE `ci_sessions` (                                                          
+               `session_id` varchar(40) NOT NULL default '0',                                      
+               `ip_address` varchar(16) NOT NULL default '0',                                      
+               `user_agent` varchar(50) NOT NULL,                                                  
+               `last_activity` int(10) unsigned NOT NULL default '0',                              
+               `session_data` text,                                                                
+               `user_data` text,                                                                   
+               PRIMARY KEY  (`session_id`)                                                         
+             ) ENGINE=MyISAM DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC  
+========================================================================
+
+/*Column Information For - shyna.currency*/
+-------------------------------------------
+
+Field            Type          Collation        Null    Key     Default  Extra           Privileges                       Comment
+---------------  ------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+currency_id      int(11)       (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+currency_value   varchar(50)   utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+course           decimal(7,4)  (NULL)           NO              (NULL)                   select,insert,update,references         
+currency_symbol  char(2)       utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+
+/*Index Information For - shyna.currency*/
+------------------------------------------
+
+Table     Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+--------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+currency           0  PRIMARY              1  currency_id  A                    4    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.currency*/
+----------------------------------------
+
+Table     Create Table                                           
+--------  -------------------------------------------------------
+currency  CREATE TABLE `currency` (                              
+            `currency_id` int(11) NOT NULL auto_increment,       
+            `currency_value` varchar(50) default NULL,           
+            `course` decimal(7,4) NOT NULL,                      
+            `currency_symbol` char(2) default NULL,              
+            PRIMARY KEY  (`currency_id`)                         
+          ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8  
+========================================================
+
+/*Column Information For - shyna.currencycourse*/
+-------------------------------------------------
+
+Field     Type                   Collation          Null    Key     Default  Extra   Privileges                       Comment
+--------  ---------------------  -----------------  ------  ------  -------  ------  -------------------------------  -------
+currency  varchar(10)            cp1251_general_ci  NO      MUL                      select,insert,update,references         
+course    decimal(7,4) unsigned  (NULL)             NO              0.0000           select,insert,update,references         
+
+/*Index Information For - shyna.currencycourse*/
+------------------------------------------------
+
+Table           Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+--------------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+currencycourse           1  currency             1  currency     A               (NULL)    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.currencycourse*/
+----------------------------------------------
+
+Table           Create Table                                                 
+--------------  -------------------------------------------------------------
+currencycourse  CREATE TABLE `currencycourse` (                              
+                  `currency` varchar(10) NOT NULL default '',                
+                  `course` decimal(7,4) unsigned NOT NULL default '0.0000',  
+                  KEY `currency` (`currency`)                                
+                ) ENGINE=MyISAM DEFAULT CHARSET=cp1251                       
+=============================================================
+
+/*Column Information For - shyna.diameter*/
+-------------------------------------------
+
+Field   Type        Collation        Null    Key     Default  Extra           Privileges                       Comment    
+------  ----------  ---------------  ------  ------  -------  --------------  -------------------------------  -----------
+id      tinyint(4)  (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references             
+value   varchar(4)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  Диаметр шин
+
+/*Index Information For - shyna.diameter*/
+------------------------------------------
+
+Table     Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+--------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+diameter           0  PRIMARY              1  id           A                   18    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.diameter*/
+----------------------------------------
+
+Table     Create Table                                                                  
+--------  ------------------------------------------------------------------------------
+diameter  CREATE TABLE `diameter` (                                                     
+            `id` tinyint(4) NOT NULL auto_increment,                                    
+            `value` varchar(4) default NULL COMMENT 'Диаметр шин',                      
+            PRIMARY KEY  (`id`)                                                         
+          ) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Диаметр шин'  
+=================================================================
+
+/*Column Information For - shyna.load_index*/
+---------------------------------------------
+
+Field   Type         Collation        Null    Key     Default  Extra           Privileges                       Comment        
+------  -----------  ---------------  ------  ------  -------  --------------  -------------------------------  ---------------
+id      smallint(4)  (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references                 
+ind     varchar(4)   utf8_general_ci  YES     MUL     (NULL)                   select,insert,update,references  Индекс нагрузки
+value   varchar(6)   utf8_general_ci  YES             (NULL)                   select,insert,update,references  Допустимый вес 
+
+/*Index Information For - shyna.load_index*/
+--------------------------------------------
+
+Table       Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+----------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+load_index           0  PRIMARY              1  id           A                  231    (NULL)  (NULL)          BTREE              
+load_index           1  ind                  1  ind          A                  231    (NULL)  (NULL)  YES     BTREE              
+
+/*DDL Information For - shyna.load_index*/
+------------------------------------------
+
+Table       Create Table                                                                       
+----------  -----------------------------------------------------------------------------------
+load_index  CREATE TABLE `load_index` (                                                        
+              `id` smallint(4) NOT NULL auto_increment,                                        
+              `ind` varchar(4) default NULL COMMENT 'Индекс нагрузки',                         
+              `value` varchar(6) default NULL COMMENT 'Допустимый вес',                        
+              PRIMARY KEY  (`id`),                                                             
+              KEY `ind` (`ind`)                                                                
+            ) ENGINE=MyISAM AUTO_INCREMENT=232 DEFAULT CHARSET=utf8 COMMENT='Индекс нагрузки'  
+============================================================
+
+/*Column Information For - shyna.model*/
+----------------------------------------
+
+Field     Type                 Collation        Null    Key     Default  Extra           Privileges                       Comment                                               
+--------  -------------------  ---------------  ------  ------  -------  --------------  -------------------------------  ------------------------------------------------------
+id        int(11)              (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references                                                        
+brand_id  tinyint(4)           (NULL)           NO      MUL     (NULL)                   select,insert,update,references                                                        
+name      varchar(255)         utf8_general_ci  NO              (NULL)                   select,insert,update,references  название                                              
+season    tinyint(3) unsigned  (NULL)           YES             0                        select,insert,update,references  0-лето, 1-зима, 2-всесезонная                         
+car       tinyint(3) unsigned  (NULL)           YES             0                        select,insert,update,references  0-легковой, 1-легкогрузовой, 2-грузовой, 3-внедорожник
+
+/*Index Information For - shyna.model*/
+---------------------------------------
+
+Table   Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+model            0  PRIMARY              1  id           A                 1684    (NULL)  (NULL)          BTREE              
+model            1  brand_id             1  brand_id     A                   64    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.model*/
+-------------------------------------
+
+Table   Create Table                                                                                               
+------  -----------------------------------------------------------------------------------------------------------
+model   CREATE TABLE `model` (                                                                                     
+          `id` int(11) NOT NULL auto_increment,                                                                    
+          `brand_id` tinyint(4) NOT NULL,                                                                          
+          `name` varchar(255) NOT NULL COMMENT 'название',                                                         
+          `season` tinyint(3) unsigned default '0' COMMENT '0-лето, 1-зима, 2-всесезонная',                        
+          `car` tinyint(3) unsigned default '0' COMMENT '0-легковой, 1-легкогрузовой, 2-грузовой, 3-внедорожник',  
+          PRIMARY KEY  (`id`),                                                                                     
+          KEY `brand_id` (`brand_id`)                                                                              
+        ) ENGINE=MyISAM AUTO_INCREMENT=1746 DEFAULT CHARSET=utf8 COMMENT='Бренд производителя'                     
+===================================================================
+
+/*Column Information For - shyna.model_syn*/
+--------------------------------------------
+
+Field     Type          Collation        Null    Key     Default  Extra           Privileges                       Comment
+--------  ------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+id        int(11)       (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+model_id  int(11)       (NULL)           NO      MUL     (NULL)                   select,insert,update,references         
+name      varchar(255)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  синоним
+
+/*Index Information For - shyna.model_syn*/
+-------------------------------------------
+
+Table      Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+---------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+model_syn           0  PRIMARY              1  id           A                 2256    (NULL)  (NULL)          BTREE              
+model_syn           1  model_id             1  model_id     A                 2256    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.model_syn*/
+-----------------------------------------
+
+Table      Create Table                                                                             
+---------  -----------------------------------------------------------------------------------------
+model_syn  CREATE TABLE `model_syn` (                                                               
+             `id` int(11) NOT NULL auto_increment,                                                  
+             `model_id` int(11) NOT NULL,                                                           
+             `name` varchar(255) default NULL COMMENT 'синоним',                                    
+             PRIMARY KEY  (`id`),                                                                   
+             KEY `model_id` (`model_id`)                                                            
+           ) ENGINE=MyISAM AUTO_INCREMENT=2328 DEFAULT CHARSET=utf8 COMMENT='Синонимы моделей шин'  
+===========================================================================
+
+/*Column Information For - shyna.page*/
+---------------------------------------
+
+Field     Type          Collation        Null    Key     Default  Extra           Privileges                       Comment
+--------  ------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+page_id   int(11)       (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+alias     varchar(50)   utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+language  varchar(5)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+title     varchar(255)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+content   text          utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+views     int(11)       (NULL)           YES             0                        select,insert,update,references         
+active    int(1)        (NULL)           YES             0                        select,insert,update,references         
+
+/*Index Information For - shyna.page*/
+--------------------------------------
+
+Table   Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+page             0  PRIMARY              1  page_id      A                    0    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.page*/
+------------------------------------
+
+Table   Create Table                                                                                            
+------  --------------------------------------------------------------------------------------------------------
+page    CREATE TABLE `page` (                                                                                   
+          `page_id` int(11) NOT NULL auto_increment,                                                            
+          `alias` varchar(50) default NULL,                                                                     
+          `language` varchar(5) default NULL,                                                                   
+          `title` varchar(255) default NULL,                                                                    
+          `content` text,                                                                                       
+          `views` int(11) default '0',                                                                          
+          `active` int(1) default '0',                                                                          
+          PRIMARY KEY  (`page_id`)                                                                              
+        ) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC  
+==================================================================
+
+/*Column Information For - shyna.pricelists*/
+---------------------------------------------
+
+Field           Type                         Collation        Null    Key     Default  Extra           Privileges                       Comment                
+--------------  ---------------------------  ---------------  ------  ------  -------  --------------  -------------------------------  -----------------------
+list_id         int(11)                      (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references                         
+vendor_id       int(11)                      (NULL)           NO      MUL     (NULL)                   select,insert,update,references  поставщик              
+price_date      datetime                     (NULL)           NO              (NULL)                   select,insert,update,references  дата и время публикации
+price_status    enum('parsed','not parsed')  utf8_general_ci  YES             parsed                   select,insert,update,references                         
+file_ext        varchar(10)                  utf8_general_ci  YES             (NULL)                   select,insert,update,references                         
+type_getting    enum('email','upload')       utf8_general_ci  NO              upload                   select,insert,update,references                         
+count_null      int(5)                       (NULL)           NO              0                        select,insert,update,references                         
+count_not_null  int(5)                       (NULL)           NO              0                        select,insert,update,references                         
+
+/*Index Information For - shyna.pricelists*/
+--------------------------------------------
+
+Table       Non_unique  Key_name   Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+----------  ----------  ---------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+pricelists           0  PRIMARY               1  list_id      A                   29    (NULL)  (NULL)          BTREE              
+pricelists           1  vendor_id             1  vendor_id    A               (NULL)    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.pricelists*/
+------------------------------------------
+
+Table       Create Table                                                                                                                  
+----------  ------------------------------------------------------------------------------------------------------------------------------
+pricelists  CREATE TABLE `pricelists` (                                                                                                   
+              `list_id` int(11) NOT NULL auto_increment,                                                                                  
+              `vendor_id` int(11) NOT NULL COMMENT 'поставщик',                                                                           
+              `price_date` datetime NOT NULL COMMENT 'дата и время публикации',                                                           
+              `price_status` enum('parsed','not parsed') default 'parsed',                                                                
+              `file_ext` varchar(10) default NULL,                                                                                        
+              `type_getting` enum('email','upload') NOT NULL default 'upload',                                                            
+              `count_null` int(5) NOT NULL default '0',                                                                                   
+              `count_not_null` int(5) NOT NULL default '0',                                                                               
+              PRIMARY KEY  (`list_id`),                                                                                                   
+              KEY `vendor_id` (`vendor_id`)                                                                                               
+            ) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC COMMENT='Прайслисты'  
+=================================================================
+
+/*Column Information For - shyna.prices*/
+-----------------------------------------
+
+Field        Type         Collation        Null    Key     Default  Extra           Privileges                       Comment                  
+-----------  -----------  ---------------  ------  ------  -------  --------------  -------------------------------  -------------------------
+id           int(11)      (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references                           
+brand_id     tinyint(4)   (NULL)           YES             (NULL)                   select,insert,update,references                           
+list_id      int(11)      (NULL)           NO      MUL     (NULL)                   select,insert,update,references  прайс-лист               
+width_id     tinyint(4)   (NULL)           YES     MUL     (NULL)                   select,insert,update,references  индекс ширины            
+profile_id   tinyint(4)   (NULL)           YES     MUL     (NULL)                   select,insert,update,references  индекс профиля           
+diameter_id  tinyint(4)   (NULL)           YES     MUL     (NULL)                   select,insert,update,references  индекс диаметра          
+model_id     int(11)      (NULL)           YES     MUL     (NULL)                   select,insert,update,references  индекс модели            
+load_id      smallint(4)  (NULL)           NO      MUL     0                        select,insert,update,references  индекс нагрузки          
+speed_id     smallint(4)  (NULL)           NO      MUL     0                        select,insert,update,references  индекс скорости          
+extra        text         utf8_general_ci  YES             (NULL)                   select,insert,update,references  дополнительная информация
+amount       varchar(50)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  количество               
+price        varchar(15)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  цена                     
+price_type   varchar(15)  utf8_general_ci  YES             (NULL)                   select,insert,update,references                           
+currency_id  int(11)      (NULL)           YES             1                        select,insert,update,references                           
+sheet_id     int(11)      (NULL)           YES             0                        select,insert,update,references                           
+
+/*Index Information For - shyna.prices*/
+----------------------------------------
+
+Table   Non_unique  Key_name     Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------  ----------  -----------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+prices           0  PRIMARY                 1  id           A                15744    (NULL)  (NULL)          BTREE              
+prices           1  list_id                 1  list_id      A                   13    (NULL)  (NULL)          BTREE              
+prices           1  width_id                1  width_id     A                   41    (NULL)  (NULL)  YES     BTREE              
+prices           1  profile_id              1  profile_id   A                   17    (NULL)  (NULL)  YES     BTREE              
+prices           1  diameter_id             1  diameter_id  A                   14    (NULL)  (NULL)  YES     BTREE              
+prices           1  model_id                1  model_id     A                  926    (NULL)  (NULL)  YES     BTREE              
+prices           1  load_id                 1  load_id      A                   93    (NULL)  (NULL)          BTREE              
+prices           1  speed_id                1  speed_id     A                   21    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.prices*/
+--------------------------------------
+
+Table   Create Table                                                                                  
+------  ----------------------------------------------------------------------------------------------
+prices  CREATE TABLE `prices` (                                                                       
+          `id` int(11) NOT NULL auto_increment,                                                       
+          `brand_id` tinyint(4) default NULL,                                                         
+          `list_id` int(11) NOT NULL COMMENT 'прайс-лист',                                            
+          `width_id` tinyint(4) default NULL COMMENT 'индекс ширины',                                 
+          `profile_id` tinyint(4) default NULL COMMENT 'индекс профиля',                              
+          `diameter_id` tinyint(4) default NULL COMMENT 'индекс диаметра',                            
+          `model_id` int(11) default NULL COMMENT 'индекс модели',                                    
+          `load_id` smallint(4) NOT NULL default '0' COMMENT 'индекс нагрузки',                       
+          `speed_id` smallint(4) NOT NULL default '0' COMMENT 'индекс скорости',                      
+          `extra` text COMMENT 'дополнительная информация',                                           
+          `amount` varchar(50) default NULL COMMENT 'количество',                                     
+          `price` varchar(15) default NULL COMMENT 'цена',                                            
+          `price_type` varchar(15) default NULL,                                                      
+          `currency_id` int(11) default '1',                                                          
+          `sheet_id` int(11) default '0',                                                             
+          PRIMARY KEY  (`id`),                                                                        
+          KEY `list_id` (`list_id`),                                                                  
+          KEY `width_id` (`width_id`),                                                                
+          KEY `profile_id` (`profile_id`),                                                            
+          KEY `diameter_id` (`diameter_id`),                                                          
+          KEY `model_id` (`model_id`),                                                                
+          KEY `load_id` (`load_id`),                                                                  
+          KEY `speed_id` (`speed_id`)                                                                 
+        ) ENGINE=MyISAM AUTO_INCREMENT=928590 DEFAULT CHARSET=utf8 COMMENT='Предложения поставщиков'  
+===================================================================
+
+
+/*Column Information For - shyna.profile*/
+------------------------------------------
+
+Field   Type        Collation        Null    Key     Default  Extra           Privileges                       Comment    
+------  ----------  ---------------  ------  ------  -------  --------------  -------------------------------  -----------
+id      tinyint(4)  (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references             
+value   varchar(4)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  Профиль шин
+
+/*Index Information For - shyna.profile*/
+-----------------------------------------
+
+Table    Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+-------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+profile           0  PRIMARY              1  id           A                   18    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.profile*/
+---------------------------------------
+
+Table    Create Table                                                                  
+-------  ------------------------------------------------------------------------------
+profile  CREATE TABLE `profile` (                                                      
+           `id` tinyint(4) NOT NULL auto_increment,                                    
+           `value` varchar(4) default NULL COMMENT 'Профиль шин',                      
+           PRIMARY KEY  (`id`)                                                         
+         ) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Профиль шин'  
+=============================================================
+
+
+/*Column Information For - shyna.sheets*/
+-----------------------------------------
+
+Field        Type                 Collation        Null    Key     Default  Extra           Privileges                       Comment                                    
+-----------  -------------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------------------------------------------
+id           int(11)              (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references                                             
+list_id      int(11)              (NULL)           NO      MUL     (NULL)                   select,insert,update,references                                             
+sheet_id     tinyint(2) unsigned  (NULL)           NO      MUL     1                        select,insert,update,references  номер листа в книге                        
+function_id  int(11)              (NULL)           YES     MUL     (NULL)                   select,insert,update,references                                             
+sheet_name   varchar(50)          utf8_general_ci  YES             (NULL)                   select,insert,update,references  листа в книге                              
+parsed       tinyint(1)           (NULL)           YES             0                        select,insert,update,references  0 - разбор не закончен, 1 - разбор закончен
+active       tinyint(1)           (NULL)           YES             0                        select,insert,update,references  0 - не участвует в разборе, 1 - участвует  
+
+/*Index Information For - shyna.sheets*/
+----------------------------------------
+
+Table   Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+sheets           0  PRIMARY              1  id           A                   24    (NULL)  (NULL)          BTREE              
+sheets           1  list                 1  list_id      A               (NULL)    (NULL)  (NULL)          BTREE              
+sheets           1  sheet                1  sheet_id     A               (NULL)    (NULL)  (NULL)          BTREE              
+sheets           1  function             1  function_id  A               (NULL)    (NULL)  (NULL)  YES     BTREE              
+
+/*DDL Information For - shyna.sheets*/
+--------------------------------------
+
+Table   Create Table                                                                              
+------  ------------------------------------------------------------------------------------------
+sheets  CREATE TABLE `sheets` (                                                                   
+          `id` int(11) NOT NULL auto_increment,                                                   
+          `list_id` int(11) NOT NULL,                                                             
+          `sheet_id` tinyint(2) unsigned NOT NULL default '1' COMMENT 'номер листа в книге',      
+          `function_id` int(11) default NULL,                                                     
+          `sheet_name` varchar(50) default NULL COMMENT 'листа в книге',                          
+          `parsed` tinyint(1) default '0' COMMENT '0 - разбор не закончен, 1 - разбор закончен',  
+          `active` tinyint(1) default '0' COMMENT '0 - не участвует в разборе, 1 - участвует',    
+          PRIMARY KEY  (`id`),                                                                    
+          KEY `list` (`list_id`),                                                                 
+          KEY `sheet` (`sheet_id`),                                                               
+          KEY `function` (`function_id`)                                                          
+        ) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8                                    
+===============================================================
+
+
+/*Column Information For - shyna.shyna_tmp11*/
+----------------------------------------------
+
+Field           Type        Collation        Null    Key     Default  Extra           Privileges                       Comment
+--------------  ----------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+A1              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A2              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A3              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A4              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A5              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A6              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A7              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A8              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A9              text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A10             text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A11             text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A12             text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+A13             text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+row_id          bigint(11)  (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+brand_id        text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+width_id        text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+profile_id      text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+diameter_id     text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+model_id        text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+load_index_id   text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+speed_index_id  text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+amount          text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+price           text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+price_type      text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+comment         text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+_temp           text        utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+
+/*Index Information For - shyna.shyna_tmp11*/
+---------------------------------------------
+
+Table        Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+-----------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+shyna_tmp11           0  PRIMARY              1  row_id       A                   28    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.shyna_tmp11*/
+-------------------------------------------
+
+Table        Create Table                                              
+-----------  ----------------------------------------------------------
+shyna_tmp11  CREATE TABLE `shyna_tmp11` (                              
+               `A1` text,                                              
+               `A2` text,                                              
+               `A3` text,                                              
+               `A4` text,                                              
+               `A5` text,                                              
+               `A6` text,                                              
+               `A7` text,                                              
+               `A8` text,                                              
+               `A9` text,                                              
+               `A10` text,                                             
+               `A11` text,                                             
+               `A12` text,                                             
+               `A13` text,                                             
+               `row_id` bigint(11) NOT NULL auto_increment,            
+               `brand_id` text,                                        
+               `width_id` text,                                        
+               `profile_id` text,                                      
+               `diameter_id` text,                                     
+               `model_id` text,                                        
+               `load_index_id` text,                                   
+               `speed_index_id` text,                                  
+               `amount` text,                                          
+               `price` text,                                           
+               `price_type` text,                                      
+               `comment` text,                                         
+               `_temp` text,                                           
+               PRIMARY KEY  (`row_id`)                                 
+             ) ENGINE=MyISAM AUTO_INCREMENT=1704 DEFAULT CHARSET=utf8  
+===================================================================
+
+
+/*Column Information For - shyna.speed_index*/
+----------------------------------------------
+
+Field   Type         Collation        Null    Key     Default  Extra           Privileges                       Comment              
+------  -----------  ---------------  ------  ------  -------  --------------  -------------------------------  ---------------------
+id      smallint(4)  (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references                       
+ind     varchar(2)   utf8_general_ci  YES     MUL     (NULL)                   select,insert,update,references  Индекс скорости      
+value   varchar(40)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  максимальная скорость
+
+/*Index Information For - shyna.speed_index*/
+---------------------------------------------
+
+Table        Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+-----------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+speed_index           0  PRIMARY              1  id           A                   32    (NULL)  (NULL)          BTREE              
+speed_index           1  ind                  1  ind          A               (NULL)    (NULL)  (NULL)  YES     BTREE              
+
+/*DDL Information For - shyna.speed_index*/
+-------------------------------------------
+
+Table        Create Table                                                                      
+-----------  ----------------------------------------------------------------------------------
+speed_index  CREATE TABLE `speed_index` (                                                      
+               `id` smallint(4) NOT NULL auto_increment,                                       
+               `ind` varchar(2) default NULL COMMENT 'Индекс скорости',                        
+               `value` varchar(40) default NULL COMMENT 'максимальная скорость',               
+               PRIMARY KEY  (`id`),                                                            
+               KEY `ind` (`ind`)                                                               
+             ) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COMMENT='Индекс скорости'  
+=====================================================================
+
+
+/*Column Information For - shyna.user_account*/
+-----------------------------------------------
+
+Field                   Type          Collation        Null    Key     Default     Extra           Privileges                       Comment                                                      
+----------------------  ------------  ---------------  ------  ------  ----------  --------------  -------------------------------  -------------------------------------------------------------
+user_id                 int(11)       (NULL)           NO      PRI     (NULL)      auto_increment  select,insert,update,references  user_id                                                      
+login                   varchar(50)   utf8_general_ci  NO      MUL     (NULL)                      select,insert,update,references  nickname/login                                               
+passwd                  varchar(100)  utf8_general_ci  NO              (NULL)                      select,insert,update,references  password in md5                                              
+email                   varchar(255)  utf8_general_ci  NO              (NULL)                      select,insert,update,references  email address                                                
+registration_date       date          (NULL)           YES             (NULL)                      select,insert,update,references                                                               
+registration_ip         varchar(20)   utf8_general_ci  YES             (NULL)                      select,insert,update,references  ip used during registration                                  
+secret_question_id      int(11)       (NULL)           YES             (NULL)                      select,insert,update,references  secret question id (taken from possible id's list)           
+secret_question_answer  varchar(100)  utf8_general_ci  YES             (NULL)                      select,insert,update,references  secret question answer                                       
+activation_code         varchar(100)  utf8_general_ci  YES             (NULL)                      select,insert,update,references  code, used to activate account                               
+activation_completed    int(1)        (NULL)           YES             0                           select,insert,update,references                                                               
+last_login_date         datetime      (NULL)           YES             (NULL)                      select,insert,update,references  date of last login (timestamp)                               
+last_login_ip           varchar(20)   utf8_general_ci  YES             (NULL)                      select,insert,update,references  ip used during the last login                                
+language                varchar(20)   utf8_general_ci  YES             (NULL)                      select,insert,update,references                                                               
+moderated               int(1)        (NULL)           YES             (NULL)                      select,insert,update,references  moderation_state: 0-new, 1-approved, 2-featured, -1-declined;
+active                  int(1)        (NULL)           YES             0                           select,insert,update,references                                                               
+city                    varchar(80)   utf8_general_ci  YES             (NULL)                      select,insert,update,references                                                               
+tel                     varchar(30)   utf8_general_ci  YES             (NULL)                      select,insert,update,references                                                               
+company                 varchar(80)   utf8_general_ci  YES             (NULL)                      select,insert,update,references                                                               
+fio                     varchar(80)   utf8_general_ci  YES             (NULL)                      select,insert,update,references                                                               
+group_id                int(11)       (NULL)           YES             1                           select,insert,update,references                                                               
+active_end_date         date          (NULL)           YES             2010-01-01                  select,insert,update,references                                                               
+
+/*Index Information For - shyna.user_account*/
+----------------------------------------------
+
+Table         Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+user_account           0  PRIMARY              1  user_id      A                   30    (NULL)  (NULL)          BTREE              
+user_account           1  login                1  login        A                   30    (NULL)  (NULL)          BTREE              
+user_account           1  login                2  passwd       A                   30    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.user_account*/
+--------------------------------------------
+
+Table         Create Table                                                                                                
+------------  ------------------------------------------------------------------------------------------------------------
+user_account  CREATE TABLE `user_account` (                                                                               
+                `user_id` int(11) NOT NULL auto_increment COMMENT 'user_id',                                              
+                `login` varchar(50) NOT NULL COMMENT 'nickname/login',                                                    
+                `passwd` varchar(100) NOT NULL COMMENT 'password in md5',                                                 
+                `email` varchar(255) NOT NULL COMMENT 'email address',                                                    
+                `registration_date` date default NULL,                                                                    
+                `registration_ip` varchar(20) default NULL COMMENT 'ip used during registration',                         
+                `secret_question_id` int(11) default NULL COMMENT 'secret question id (taken from possible id''s list)',  
+                `secret_question_answer` varchar(100) default NULL COMMENT 'secret question answer',                      
+                `activation_code` varchar(100) default NULL COMMENT 'code, used to activate account',                     
+                `activation_completed` int(1) default '0',                                                                
+                `last_login_date` datetime default NULL COMMENT 'date of last login (timestamp)',                         
+                `last_login_ip` varchar(20) default NULL COMMENT 'ip used during the last login',                         
+                `language` varchar(20) default NULL,                                                                      
+                `moderated` int(1) default NULL COMMENT 'moderation_state: 0-new, 1-approved, 2-featured, -1-declined;',  
+                `active` int(1) default '0',                                                                              
+                `city` varchar(80) default NULL,                                                                          
+                `tel` varchar(30) default NULL,                                                                           
+                `company` varchar(80) default NULL,                                                                       
+                `fio` varchar(80) default NULL,                                                                           
+                `group_id` int(11) default '1',                                                                           
+                `active_end_date` date default '2010-01-01',                                                              
+                PRIMARY KEY  (`user_id`),                                                                                 
+                KEY `login` (`login`,`passwd`)                                                                            
+              ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='user information'        
+===========================================================
+
+
+
+/*Column Information For - shyna.user_group*/
+---------------------------------------------
+
+Field       Type         Collation        Null    Key     Default  Extra   Privileges                       Comment
+----------  -----------  ---------------  ------  ------  -------  ------  -------------------------------  -------
+group_id    int(11)      (NULL)           NO      PRI     (NULL)           select,insert,update,references         
+group_name  varchar(20)  utf8_general_ci  YES             (NULL)           select,insert,update,references         
+
+/*Index Information For - shyna.user_group*/
+--------------------------------------------
+
+Table       Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+----------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+user_group           0  PRIMARY              1  group_id     A                    4    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.user_group*/
+------------------------------------------
+
+Table       Create Table                              
+----------  ------------------------------------------
+user_group  CREATE TABLE `user_group` (               
+              `group_id` int(11) NOT NULL,            
+              `group_name` varchar(20) default NULL,  
+              PRIMARY KEY  (`group_id`)               
+            ) ENGINE=MyISAM DEFAULT CHARSET=utf8      
+=================================================================
+
+
+/*Column Information For - shyna.user_group_map1*/
+--------------------------------------------------
+
+Field              Type     Collation  Null    Key     Default  Extra           Privileges                       Comment
+-----------------  -------  ---------  ------  ------  -------  --------------  -------------------------------  -------
+user_group_map_id  int(11)  (NULL)     NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+user_id            int(11)  (NULL)     YES             (NULL)                   select,insert,update,references         
+group_id           int(11)  (NULL)     YES             0                        select,insert,update,references         
+
+/*Index Information For - shyna.user_group_map1*/
+-------------------------------------------------
+
+Table            Non_unique  Key_name  Seq_in_index  Column_name        Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+---------------  ----------  --------  ------------  -----------------  ---------  -----------  --------  ------  ------  ----------  -------
+user_group_map1           0  PRIMARY              1  user_group_map_id  A                   20    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.user_group_map1*/
+-----------------------------------------------
+
+Table            Create Table                                            
+---------------  --------------------------------------------------------
+user_group_map1  CREATE TABLE `user_group_map1` (                        
+                   `user_group_map_id` int(11) NOT NULL auto_increment,  
+                   `user_id` int(11) default NULL,                       
+                   `group_id` int(11) default '0',                       
+                   PRIMARY KEY  (`user_group_map_id`)                    
+                 ) ENGINE=MyISAM AUTO_INCREMENT=95 DEFAULT CHARSET=utf8  
+===============================================================
+
+
+/*Column Information For - shyna.user_profile1*/
+------------------------------------------------
+
+Field              Type                 Collation        Null    Key     Default  Extra           Privileges                       Comment                                                        
+-----------------  -------------------  ---------------  ------  ------  -------  --------------  -------------------------------  ---------------------------------------------------------------
+profile_id         int(11)              (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references                                                                 
+user_id            int(11) unsigned     (NULL)           NO      MUL     (NULL)                   select,insert,update,references                                                                 
+name               varchar(255)         utf8_general_ci  YES             (NULL)                   select,insert,update,references                                                                 
+surname            varchar(255)         utf8_general_ci  YES             (NULL)                   select,insert,update,references                                                                 
+patronymic         varchar(255)         utf8_general_ci  YES             (NULL)                   select,insert,update,references                                                                 
+account_no         varchar(10)          utf8_general_ci  YES             (NULL)                   select,insert,update,references                                                                 
+street_type_id     tinyint(2) unsigned  (NULL)           YES     MUL     (NULL)                   select,insert,update,references                                                                 
+street_id          int(11) unsigned     (NULL)           YES     MUL     (NULL)                   select,insert,update,references                                                                 
+house_id           int(11) unsigned     (NULL)           YES     MUL     (NULL)                   select,insert,update,references                                                                 
+apartment          varchar(3)           utf8_general_ci  YES             (NULL)                   select,insert,update,references                                                                 
+last_payment_date  date                 (NULL)           YES             (NULL)                   select,insert,update,references  дата последнего платежа                                        
+last_payment_sum   decimal(10,2)        (NULL)           YES             (NULL)                   select,insert,update,references  сумма последнего платежа                                       
+pay_netting        int(1)               (NULL)           YES             0                        select,insert,update,references  взаиморасчет                                                   
+creation_date      date                 (NULL)           YES             (NULL)                   select,insert,update,references                                                                 
+initial            int(1)               (NULL)           NO              0                        select,insert,update,references                                                                 
+status             int(1)               (NULL)           YES             0                        select,insert,update,references  0 - новый, 1 - в обработке, 2 - подтвержденный, 3 - отклоненный
+active             int(1)               (NULL)           YES             1                        select,insert,update,references                                                                 
+
+/*Index Information For - shyna.user_profile1*/
+-----------------------------------------------
+
+Table          Non_unique  Key_name        Seq_in_index  Column_name     Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+-------------  ----------  --------------  ------------  --------------  ---------  -----------  --------  ------  ------  ----------  -------
+user_profile1           0  PRIMARY                    1  profile_id      A                    1    (NULL)  (NULL)          BTREE              
+user_profile1           1  user_id                    1  user_id         A                    1    (NULL)  (NULL)          BTREE              
+user_profile1           1  street_type_id             1  street_type_id  A                    1    (NULL)  (NULL)  YES     BTREE              
+user_profile1           1  street_id                  1  street_id       A                    1    (NULL)  (NULL)  YES     BTREE              
+user_profile1           1  house_id                   1  house_id        A                    1    (NULL)  (NULL)  YES     BTREE              
+
+/*DDL Information For - shyna.user_profile1*/
+---------------------------------------------
+
+Table          Create Table                                                                                                                                                
+-------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------
+user_profile1  CREATE TABLE `user_profile1` (                                                                                                                              
+                 `profile_id` int(11) NOT NULL auto_increment,                                                                                                             
+                 `user_id` int(11) unsigned NOT NULL,                                                                                                                      
+                 `name` varchar(255) default NULL,                                                                                                                         
+                 `surname` varchar(255) default NULL,                                                                                                                      
+                 `patronymic` varchar(255) default NULL,                                                                                                                   
+                 `account_no` varchar(10) default NULL,                                                                                                                    
+                 `street_type_id` tinyint(2) unsigned default NULL,                                                                                                        
+                 `street_id` int(11) unsigned default NULL,                                                                                                                
+                 `house_id` int(11) unsigned default NULL,                                                                                                                 
+                 `apartment` varchar(3) default NULL,                                                                                                                      
+                 `last_payment_date` date default NULL COMMENT 'дата последнего платежа',                                                                                  
+                 `last_payment_sum` decimal(10,2) default NULL COMMENT 'сумма последнего платежа',                                                                         
+                 `pay_netting` int(1) default '0' COMMENT 'взаиморасчет',                                                                                                  
+                 `creation_date` date default NULL,                                                                                                                        
+                 `initial` int(1) NOT NULL default '0',                                                                                                                    
+                 `status` int(1) default '0' COMMENT '0 - новый, 1 - в обработке, 2 - подтвержденный, 3 - отклоненный',                                                    
+                 `active` int(1) default '1',                                                                                                                              
+                 PRIMARY KEY  (`profile_id`),                                                                                                                              
+                 KEY `user_id` (`user_id`),                                                                                                                                
+                 KEY `street_type_id` (`street_type_id`),                                                                                                                  
+                 KEY `street_id` (`street_id`),                                                                                                                            
+                 KEY `house_id` (`house_id`)                                                                                                                               
+               ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=66 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC COMMENT='данные по лицевым счетам'  
+=======================================================================
+
+
+/*Column Information For - shyna.vendor*/
+-----------------------------------------
+
+Field       Type          Collation        Null    Key     Default  Extra   Privileges                       Comment 
+----------  ------------  ---------------  ------  ------  -------  ------  -------------------------------  --------
+id          int(11)       (NULL)           NO      PRI     (NULL)           select,insert,update,references          
+user_id     int(11)       (NULL)           YES     MUL     (NULL)           select,insert,update,references          
+name        varchar(255)  utf8_general_ci  YES             (NULL)           select,insert,update,references  Название
+short_name  varchar(255)  utf8_general_ci  YES             (NULL)           select,insert,update,references          
+city        varchar(255)  utf8_general_ci  YES             (NULL)           select,insert,update,references  город   
+short_city  varchar(255)  utf8_general_ci  YES             (NULL)           select,insert,update,references          
+phone       varchar(50)   utf8_general_ci  YES             (NULL)           select,insert,update,references  телефон 
+fax         varchar(50)   utf8_general_ci  YES             (NULL)           select,insert,update,references  факс    
+email       varchar(50)   utf8_general_ci  YES             (NULL)           select,insert,update,references  email   
+www         varchar(100)  utf8_general_ci  YES             (NULL)           select,insert,update,references          
+
+/*Index Information For - shyna.vendor*/
+----------------------------------------
+
+Table   Non_unique  Key_name   Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------  ----------  ---------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+vendor           0  PRIMARY               1  id           A                   19    (NULL)  (NULL)          BTREE              
+vendor           1  NewIndex1             1  user_id      A               (NULL)    (NULL)  (NULL)  YES     BTREE              
+
+/*DDL Information For - shyna.vendor*/
+--------------------------------------
+
+Table   Create Table                                                                  
+------  ------------------------------------------------------------------------------
+vendor  CREATE TABLE `vendor` (                                                       
+          `id` int(11) NOT NULL,                                                      
+          `user_id` int(11) default NULL,                                             
+          `name` varchar(255) default NULL COMMENT 'Название',                        
+          `short_name` varchar(255) default NULL,                                     
+          `city` varchar(255) default NULL COMMENT 'город',                           
+          `short_city` varchar(255) default NULL,                                     
+          `phone` varchar(50) default NULL COMMENT 'телефон',                         
+          `fax` varchar(50) default NULL COMMENT 'факс',                              
+          `email` varchar(50) default NULL COMMENT 'email',                           
+          `www` varchar(100) default NULL,                                            
+          PRIMARY KEY  (`id`),                                                        
+          KEY `NewIndex1` (`user_id`)                                                 
+        ) ENGINE=MyISAM AUTO_INCREMENT=280 DEFAULT CHARSET=utf8 COMMENT='Поставщики'  
+=============================================================
+
+/*Column Information For - shyna.vendor_accounts*/
+--------------------------------------------------
+
+Field          Type          Collation        Null    Key     Default  Extra           Privileges                       Comment
+-------------  ------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+account_id     int(11)       (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+account_email  varchar(100)  utf8_general_ci  NO              (NULL)                   select,insert,update,references         
+vendor_id      int(11)       (NULL)           NO              (NULL)                   select,insert,update,references         
+
+/*Index Information For - shyna.vendor_accounts*/
+-------------------------------------------------
+
+Table            Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+---------------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+vendor_accounts           0  PRIMARY              1  account_id   A                    5    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.vendor_accounts*/
+-----------------------------------------------
+
+Table            Create Table                                           
+---------------  -------------------------------------------------------
+vendor_accounts  CREATE TABLE `vendor_accounts` (                       
+                   `account_id` int(11) NOT NULL auto_increment,        
+                   `account_email` varchar(100) NOT NULL,               
+                   `vendor_id` int(11) NOT NULL,                        
+                   PRIMARY KEY  (`account_id`)                          
+                 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8  
+=======================================================================
+
+
+/*Column Information For - shyna.vendor_functions*/
+---------------------------------------------------
+
+Field               Type          Collation        Null    Key     Default  Extra           Privileges                       Comment
+------------------  ------------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+function_id         int(11)       (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+vendor_id           int(11)       (NULL)           YES             (NULL)                   select,insert,update,references         
+brand_column        varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+brand_func          varchar(400)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+width_column        varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+width_func          varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+profile_column      varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+profile_func        varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+diameter_column     varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+diameter_func       varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+model_column        varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+model_func          varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+load_index_column   varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+load_index_func     varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+speed_index_column  varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+speed_index_func    varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+amount_column       varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+amount_func         varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+price_column        varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+price_func          varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+price_type_column   varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+price_type_func     varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+comment_func        varchar(600)  utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+comment_column      varchar(3)    utf8_general_ci  YES             (NULL)                   select,insert,update,references         
+rows_ignore         int(2)        (NULL)           YES             (NULL)                   select,insert,update,references         
+columns_count       int(2)        (NULL)           YES             (NULL)                   select,insert,update,references         
+delete_tmp_table    tinyint(1)    (NULL)           YES             (NULL)                   select,insert,update,references         
+
+/*Index Information For - shyna.vendor_functions*/
+--------------------------------------------------
+
+Table             Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+----------------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+vendor_functions           0  PRIMARY              1  function_id  A                   24    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.vendor_functions*/
+------------------------------------------------
+
+Table             Create Table                                            
+----------------  --------------------------------------------------------
+vendor_functions  CREATE TABLE `vendor_functions` (                       
+                    `function_id` int(11) NOT NULL auto_increment,        
+                    `vendor_id` int(11) default NULL,                     
+                    `brand_column` varchar(3) default NULL,               
+                    `brand_func` varchar(400) default NULL,               
+                    `width_column` varchar(3) default NULL,               
+                    `width_func` varchar(600) default NULL,               
+                    `profile_column` varchar(3) default NULL,             
+                    `profile_func` varchar(600) default NULL,             
+                    `diameter_column` varchar(3) default NULL,            
+                    `diameter_func` varchar(600) default NULL,            
+                    `model_column` varchar(3) default NULL,               
+                    `model_func` varchar(600) default NULL,               
+                    `load_index_column` varchar(3) default NULL,          
+                    `load_index_func` varchar(600) default NULL,          
+                    `speed_index_column` varchar(3) default NULL,         
+                    `speed_index_func` varchar(600) default NULL,         
+                    `amount_column` varchar(3) default NULL,              
+                    `amount_func` varchar(600) default NULL,              
+                    `price_column` varchar(3) default NULL,               
+                    `price_func` varchar(600) default NULL,               
+                    `price_type_column` varchar(3) default NULL,          
+                    `price_type_func` varchar(600) default NULL,          
+                    `comment_func` varchar(600) default NULL,             
+                    `comment_column` varchar(3) default NULL,             
+                    `rows_ignore` int(2) default NULL,                    
+                    `columns_count` int(2) default NULL,                  
+                    `delete_tmp_table` tinyint(1) default NULL,           
+                    PRIMARY KEY  (`function_id`)                          
+                  ) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8  
+====================================================================
+
+
+/*Column Information For - shyna.vendor_person*/
+------------------------------------------------
+
+Field      Type          Collation        Null    Key     Default  Extra           Privileges                       Comment  
+---------  ------------  ---------------  ------  ------  -------  --------------  -------------------------------  ---------
+id         int(11)       (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references           
+vendor_id  int(11)       (NULL)           NO      MUL     (NULL)                   select,insert,update,references  поставщик
+name       varchar(255)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  ФИО      
+posada     varchar(255)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  должность
+phone      varchar(50)   utf8_general_ci  YES             (NULL)                   select,insert,update,references  телефон  
+email      varchar(50)   utf8_general_ci  YES             (NULL)                   select,insert,update,references  email    
+
+/*Index Information For - shyna.vendor_person*/
+-----------------------------------------------
+
+Table          Non_unique  Key_name   Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+-------------  ----------  ---------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+vendor_person           0  PRIMARY               1  id           A                   18    (NULL)  (NULL)          BTREE              
+vendor_person           1  vendor_id             1  vendor_id    A               (NULL)    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.vendor_person*/
+---------------------------------------------
+
+Table          Create Table                                                                      
+-------------  ----------------------------------------------------------------------------------
+vendor_person  CREATE TABLE `vendor_person` (                                                    
+                 `id` int(11) NOT NULL auto_increment,                                           
+                 `vendor_id` int(11) NOT NULL COMMENT 'поставщик',                               
+                 `name` varchar(255) default NULL COMMENT 'ФИО',                                 
+                 `posada` varchar(255) default NULL COMMENT 'должность',                         
+                 `phone` varchar(50) default NULL COMMENT 'телефон',                             
+                 `email` varchar(50) default NULL COMMENT 'email',                               
+                 PRIMARY KEY  (`id`),                                                            
+                 KEY `vendor_id` (`vendor_id`)                                                   
+               ) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COMMENT='Контактные лица'  
+================================================================
+
+/*Column Information For - shyna.width*/
+----------------------------------------
+
+Field   Type        Collation        Null    Key     Default  Extra           Privileges                       Comment
+------  ----------  ---------------  ------  ------  -------  --------------  -------------------------------  -------
+id      tinyint(4)  (NULL)           NO      PRI     (NULL)   auto_increment  select,insert,update,references         
+value   varchar(4)  utf8_general_ci  YES             (NULL)                   select,insert,update,references  Ширина 
+
+/*Index Information For - shyna.width*/
+---------------------------------------
+
+Table   Non_unique  Key_name  Seq_in_index  Column_name  Collation  Cardinality  Sub_part  Packed  Null    Index_type  Comment
+------  ----------  --------  ------------  -----------  ---------  -----------  --------  ------  ------  ----------  -------
+width            0  PRIMARY              1  id           A                   52    (NULL)  (NULL)          BTREE              
+
+/*DDL Information For - shyna.width*/
+-------------------------------------
+
+Table   Create Table                                                                                                                 
+------  -----------------------------------------------------------------------------------------------------------------------------
+width   CREATE TABLE `width` (                                                                                                       
+          `id` tinyint(4) NOT NULL auto_increment,                                                                                   
+          `value` varchar(4) default NULL COMMENT 'Ширина',                                                                          
+          PRIMARY KEY  (`id`)                                                                                                        
+        ) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC COMMENT='Ширина шин'  
+===============================================================
+
+
+
+
